@@ -2,7 +2,8 @@ function abrirApp (){
 
     //Links app
     var androidLink = 'vnd.appbarber://'
-    var iosLink = 'https://chatgpt.com/'
+    var iosLink = 'AppBarberCliente://';  // Aqui deve ser o deep link do seu app
+
 
     //Links para as lojas do app (Android ou IOS)
     var androidLinkLoja = 'https://play.google.com/store/search?q=app+barber&c=apps'
