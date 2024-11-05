@@ -1,8 +1,8 @@
 function abrirApp (){
 
     //Links app
-    var androidLink = 'https://play.google.com/store/search?q=app+barber&c=apps'
-    var iosLink = 'https://play.google.com/store/search?q=app+barber&c=apps'
+    var androidLink = 'vnd.appbarber://'
+    var iosLink = 'https://chatgpt.com/'
 
     //Links para as lojas do app (Android ou IOS)
     var androidLinkLoja = 'https://play.google.com/store/search?q=app+barber&c=apps'
