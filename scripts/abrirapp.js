@@ -1,4 +1,4 @@
-function abrirInstagram() {
+function abrirApp() {
     // Links para abrir o Instagram diretamente
     var androidLink = 'intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end';
     var iosLink = 'instagram://';
