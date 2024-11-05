@@ -1,28 +1,27 @@
-function abrirApp (){
+function abrirInstagram() {
+    // Links para abrir o Instagram diretamente
+    var androidLink = 'intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end';
+    var iosLink = 'instagram://';
 
-    //Links app
-    var androidLink = 'vnd.appbarber://'
-    var iosLink = 'AppBarberCliente://';  // Aqui deve ser o deep link do seu app
+    // Links para as lojas de aplicativos (Android ou iOS)
+    var androidLinkLoja = 'https://play.google.com/store/apps/details?id=com.instagram.android';
+    var iosLinkLoja = 'https://apps.apple.com/br/app/instagram/id389801252';
 
+    var startTime = Date.now();
 
-    //Links para as lojas do app (Android ou IOS)
-    var androidLinkLoja = 'https://play.google.com/store/search?q=app+barber&c=apps'
-    var iosLinkLoja = 'https://apps.apple.com/br/app/appbarber-cliente/id6450795073'
+    // Tenta abrir o Instagram no iOS ou Android
+    window.location.href = isIos() ? iosLink : androidLink;
 
-    var startTime = Date.now()
-
-    window.location.href = isIos() ? iosLink : androidLink
-
-    //Redireciona para as lojas de aplicativos caso não abra o app, / 1segundo de tempo
+    // Redireciona para as lojas de aplicativos caso o app não seja aberto após 1 segundo
     setTimeout(function () {
         var endTime = Date.now();
         if (endTime - startTime < 1500) { 
-            window.location.href = isIOS() ? iosLinkLoja : androidLinkLoja;
+            window.location.href = isIos() ? iosLinkLoja : androidLinkLoja;
         }
-    }, 1000)
-
+    }, 1000);
 }
-    //Detecta se os dispositivo é IOS
-    function isIos (){
-    return /iphone|ipod|ipad/i.test(navigator.userAgent)
-    }
+
+// Função para detectar se o dispositivo é iOS
+function isIos() {
+    return /iphone|ipod|ipad/i.test(navigator.userAgent);
+}
