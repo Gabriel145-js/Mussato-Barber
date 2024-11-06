@@ -1,11 +1,8 @@
 //responsavel por copiar o valor oculto no button.
 
-async function copyCNPJ() {
-    
+async function copiar() {
     var cnpj = document.getElementById("cnpjInput").value
-
-    try {
-        
+    try { 
         await navigator.clipboard.writeText(cnpj)
         alert("CNPJ copiado ")
     } catch (err) {
@@ -13,3 +10,19 @@ async function copyCNPJ() {
         alert("Erro ao copiar o CNPJ.")
     }
 }
+
+//Função responsavel pelo compartilhamento.
+function compartilhar() {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title,
+        text: 'Confira esse site!',
+        url: window.location.href
+      })
+      .then(() => console.log('Compartilhado com sucesso!'))
+      .catch((error) => console.log('Erro ao compartilhar:', error));
+    } else {
+      alert('compartilhamento não suportada neste navegador.');
+    }
+  }
+

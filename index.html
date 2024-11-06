@@ -12,21 +12,27 @@
 
 <body>
     <main class="card">
-        
+
+         
+            <input id="qrcode" type="button" value="QrCode">
+            <input id="compartilhar" type="button" value="Compartilhar" onclick="compartilhar()">
+      
 
         <span id="img"><img src="assents/Imgs/Design sem nome (3).png" alt=""></span>
 
-        
-    <section>
-        <div class="botoes-interativos">
-            <input  class="inputs-links" type="button" value="Agende seu Horário" onclick="abrirApp();">
-            <input  class="inputs-links" type="button" value="Avaliar no Google" >
-            <input  class="inputs-links" type="button" value="Instagram" onclick="window.open('https://www.instagram.com/_mussattobarbershop/', '_blank');">
-            <input  class="inputs-links" type="button" id="copyButton" value="Copiar chave PIX/CNPJ" onclick="copyCNPJ()">
-            <input type="text" id="cnpjInput" value="12.345.678/0001-90" readonly>
-            
-        </div>
-    </section>
+
+        <section>
+            <div class="botoes-interativos">
+                <input class="inputs-links" type="button" value="Agende seu Horário" onclick="abrirApp();">
+                <input class="inputs-links" type="button" value="Avaliar no Google">
+                <input class="inputs-links" type="button" value="Instagram"
+                    onclick="window.open('https://www.instagram.com/_mussattobarbershop/', '_blank');">
+                <input class="inputs-links" type="button" id="copyButton" value="Copiar chave PIX/CNPJ"
+                    onclick="copiar()">
+                <input type="text" id="cnpjInput" value="12.345.678/0001-90" readonly>
+
+            </div>
+        </section>
 
     </main>
 

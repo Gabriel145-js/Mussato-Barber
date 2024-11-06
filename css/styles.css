@@ -21,13 +21,52 @@ body {
   border-radius: 20px;
 }
 
+#compartilhar {
+  text-align: center;
+  position: relative;
+  float: right;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(34, 29, 29, 0.6392156863);
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+  color: #fff;
+  width: 20%;
+  font-size: clamp(0.1rem, 1.8vw, 1.2rem);
+  cursor: pointer;
+  font-family: Poppins;
+  margin-top: 8%;
+  margin-right: 10%;
+}
+#compartilhar:hover {
+  background-color: rgba(54, 79, 58, 0.4823529412);
+}
+
+#qrcode {
+  text-align: center;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(34, 29, 29, 0.6392156863);
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+  color: #fff;
+  width: 20%;
+  font-size: clamp(0.1rem, 1.8vw, 1.2rem);
+  cursor: pointer;
+  font-family: Poppins;
+  margin-top: 8%;
+  margin-left: 10%;
+}
+#qrcode:hover {
+  background-color: rgba(54, 79, 58, 0.4823529412);
+}
+
 #img {
   display: flex;
   justify-content: center;
   position: relative;
 }
 #img img {
-  margin-top: 90px;
+  margin-top: 60px;
   width: 100%;
   max-width: 400px;
   transition: transform 0.3s ease;
