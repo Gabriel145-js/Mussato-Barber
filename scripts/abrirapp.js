@@ -1,11 +1,11 @@
 function abrirApp() {
     // Links para abrir o Instagram diretamente
     var androidLink = 'intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end';
-    var iosLink = 'appbarbercliente://';
+    var iosLink = 'appbarber-cliente://';
 
     // Links para as lojas de aplicativos (Android ou iOS)
     var androidLinkLoja = 'https://play.google.com/store/apps/details?id=com.instagram.android';
-    var iosLinkLoja = 'https://apps.apple.com/br/app/instagram/id389801252';
+    var iosLinkLoja = 'https://apps.apple.com/br/app/appbarber-cliente/id6450795073';
 
     var startTime = Date.now();
 
