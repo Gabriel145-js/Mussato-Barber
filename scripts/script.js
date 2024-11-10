@@ -20,9 +20,9 @@ function compartilhar() {
         url: window.location.href
       })
       .then(() => console.log('Compartilhado com sucesso!'))
-      .catch((error) => console.log('Erro ao compartilhar:', error));
+      .catch((error) => console.log('Erro ao compartilhar:', error))
     } else {
-      alert('compartilhamento não suportada neste navegador.');
+      alert('compartilhamento não suportada neste navegador.')
     }
   }
 
