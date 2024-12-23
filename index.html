@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    
+
     <script src="scripts/script.js"></script>
     <script src="scripts/abrirapp.js"></script>
+    <script src="scripts/carrosel.js"></script>
+    <script src="https://kit.fontawesome.com/0c81659ef6.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>
     <main class="card">
 
-         
+        <div class="botoes-acima">
             <input id="qrcode" type="button" value="QrCode">
             <input id="compartilhar" type="button" value="Compartilhar" onclick="compartilhar()">
-      
+        </div>
 
         <span id="img"><img src="assents/Imgs/Design sem nome (3).png" alt=""></span>
-
 
         <section>
             <div class="botoes-interativos">
@@ -35,6 +36,26 @@
             </div>
         </section>
 
+        <section class="janelas-pagamentos">
+            <div class="cont">
+                <div class="container-carrosel">
+                    <img src="assents/Imgs/cbl.jpg" alt="" class="carrossel-image">
+                    <img src="assents/Imgs/cbl2.jpg" alt="" class="carrossel-image">
+                    <img src="assents/Imgs/Design sem nome (3).png  " alt="" class="carrossel-image">
+
+                </div>
+
+                <button id="antes">
+                    <i class="fa-solid fa-angle-left fa-2x"></i>
+                </button>
+
+                <button id="prox">
+                    <i class="fa-solid fa-angle-right fa-2x"></i>
+                </button>
+            </div>
+
+
+        </section>
     </main>
 
 
