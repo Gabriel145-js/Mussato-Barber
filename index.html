@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="scripts/script.js"></script>
-    <script src="scripts/abrirapp.js"></script>
-    <script src="scripts/carrosel.js"></script>
-    <script src="https://kit.fontawesome.com/0c81659ef6.js" crossorigin="anonymous"></script>
+   
     <title>Document</title>
 </head>
 
@@ -18,6 +15,8 @@
 
         <div class="botoes-acima">
             <input id="qrcode" type="button" value="QrCode">
+            <video id="videoElemento" autoplay></video>
+            <div id="qrResultado"></div>
             <input id="compartilhar" type="button" value="Compartilhar" onclick="compartilhar()">
         </div>
 
@@ -36,29 +35,32 @@
             </div>
         </section>
 
-        <section class="janelas-pagamentos">
-            <div class="cont">
-                <div class="container-carrosel">
-                    <img src="assents/Imgs/cbl.jpg" alt="" class="carrossel-image">
-                    <img src="assents/Imgs/cbl2.jpg" alt="" class="carrossel-image">
-                    <img src="assents/Imgs/Design sem nome (3).png  " alt="" class="carrossel-image">
-
+        <section class="container" >
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="foto" style="background-image: url('assents/Imgs/cbl.jpg');"></div>
+                    <div class="foto" style="background-image: url('assents/Imgs/cbl2.jpg');"></div>
+                    <div class="foto" style="background-image: url('assents/Imgs/Design\ sem\ nome\ \(3\).png');"></div>
+                   
+                   
                 </div>
-
-                <button id="antes">
-                    <i class="fa-solid fa-angle-left fa-2x"></i>
-                </button>
-
-                <button id="prox">
-                    <i class="fa-solid fa-angle-right fa-2x"></i>
-                </button>
+                
+    
             </div>
-
-
+            <button class="arrow" id="proximo"> <i class="fa-solid fa-arrow-right"></i></button>
+            <button class="arrow" id="antes"> <i class="fa-solid fa-arrow-left"></i></button>
+            
+            <button id="vejaMais">Pagar Agora</button>
         </section>
     </main>
 
 
 </body>
+<script src="scripts/script.js"></script>
+<script src="scripts/abrirapp.js"></script>
+<script src="scripts/carrosel.js"></script>
+<script src="scripts/leitorQr.js"></script>
+<script src="https://kit.fontawesome.com/0c81659ef6.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.js"></script>
 
 </html>

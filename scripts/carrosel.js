@@ -1,35 +1,44 @@
-//responsavel pelo carrosel de fotos 
 
-document.addEventListener('DOMContentLoaded', function(){
-    const imgs = document.querySelectorAll('.container-carrosel img')
-    const prox = document.getElementById('prox')
-    const ante = document.getElementById('antes')
-    let contador = 0
+let index = 0;
+const fotos = document.querySelectorAll('.foto');
+const carrossel = document.querySelector('.carrossel');
+const vejaMaisButton = document.getElementById('vejaMais');
+const proximo = document.getElementById('proximo')
+const antes = document.getElementById('antes')
 
-    function proximo(){
-      imgs[contador].style.display = 'none'
-      contador = (contador + 1) % imgs.length 
-      imgs[contador].style.display = 'block'
-    }
+function mudarFoto() {
     
-    function antes(){
-      imgs[contador].style.display = 'none'
-      contador = (contador - 1 + imgs.length) % imgs.length 
-      imgs[contador].style.display = 'block'
-
-    }
-
-    prox.onclick = proximo
-    ante.onclick = antes
+    fotos.forEach(foto => {
+        foto.classList.remove('visible');
+    });
     
-    /* function proximoauto (){
-        proximo()
-        setTimeout(proximoauto, 3000)
-    }
-    setTimeout(proximoauto, 3000)*/     
+    fotos[index].classList.add('visible');
 
-     for(let i = 0; i < imgs.length; i++){
-        imgs[i].style.display = 'none'
-     }
-     imgs[0].style.display = 'block'
-})
+    carrossel.style.transform = `translateX(-${index * 100}%)`;
+
+    index = (index + 1) % fotos.length;
+  
+}
+
+proximo.onclick = function() {
+  index = (index + 1) % fotos.length;  // Aumenta o índice e garante que ele nunca ultrapasse o número total de fotos
+  mudarFoto();  // Atualiza a foto imediatamente
+};
+
+antes.onclick = function() {
+  index = (index - 1 + fotos.length) % fotos.length;  // Aumenta o índice e garante que ele nunca ultrapasse o número total de fotos
+  mudarFoto();  // Atualiza a foto imediatamente
+};
+
+fotos.forEach((foto, i) => {
+    if (i === 0) {
+        foto.classList.add('visible');
+    }
+});
+
+setInterval(mudarFoto, 3000);
+
+vejaMaisButton.addEventListener('click', () => {
+    // Aqui você pode adicionar qualquer ação para o botão "Veja Mais"
+    alert("Aqui você pode adicionar mais fotos ou conteúdo!");
+});
