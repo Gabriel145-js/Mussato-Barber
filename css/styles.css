@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  background: rgb(33, 33, 33);
-  background: linear-gradient(180deg, rgb(33, 33, 33) 0%, rgb(5, 45, 41) 100%);
+  background: rgb(79, 79, 83);
+  background: radial-gradient(circle, rgb(79, 79, 83) 7%, rgb(0, 0, 0) 100%);
   height: auto;
   display: flex;
   justify-content: center;
@@ -20,8 +20,8 @@ body {
   width: 50%;
   height: auto;
   min-height: 90%;
-  background: rgb(11, 115, 91);
-  background: radial-gradient(circle, rgb(11, 115, 91) 0%, rgb(0, 0, 0) 95%);
+  background: rgb(79, 79, 83);
+  background: radial-gradient(circle, rgb(79, 79, 83) 7%, rgb(0, 0, 0) 75%);
   border-radius: 20px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -46,7 +46,7 @@ body {
   margin-right: 10%;
   border: 3px solid transparent;
   border-radius: 8px;
-  background-color: rgba(34, 29, 29, 0.6392156863);
+  background-color: rgba(126, 124, 124, 0.5058823529);
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
   color: #fff;
   width: 20%;
@@ -54,9 +54,12 @@ body {
   font-size: clamp(1.1rem, 1.8vw, 1.2rem);
   cursor: pointer;
   font-family: Poppins;
+  transition: 0.1s ease-in-out;
 }
 #compartilhar:hover {
-  background-color: rgba(54, 79, 58, 0.4823529412);
+  background-color: rgba(116, 116, 116, 0.3647058824);
+  box-shadow: 15px 10px 12px rgba(204, 201, 201, 0.336);
+  transform: scale(1.1);
 }
 
 #qrcode {
@@ -64,17 +67,20 @@ body {
   position: relative;
   border: 3px solid transparent;
   border-radius: 8px;
-  background-color: rgba(34, 29, 29, 0.6392156863);
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+  background-color: rgba(126, 124, 124, 0.5058823529);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.445);
   color: #fff;
   width: 20%;
   font-size: clamp(1.1rem, 1.8vw, 1.2rem);
   cursor: pointer;
   font-family: Poppins;
   margin-left: 10%;
+  transition: 0.1s ease-in-out;
 }
 #qrcode:hover {
-  background-color: rgba(54, 79, 58, 0.4823529412);
+  background-color: rgba(116, 116, 116, 0.3647058824);
+  box-shadow: 15px 10px 12px rgba(204, 201, 201, 0.336);
+  transform: scale(1.1);
 }
 
 #img {
@@ -104,17 +110,20 @@ body {
   position: relative;
   border: 3px solid transparent;
   border-radius: 8px;
-  background-color: rgba(34, 29, 29, 0.6392156863);
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
-  color: #fff;
+  background-color: rgba(126, 124, 124, 0.5058823529);
+  box-shadow: 15px 10px 12px rgba(0, 0, 0, 0.445);
+  color: #ffffff;
   width: 100%;
   font-size: clamp(1.1rem, 1.8vw, 1.2rem);
   cursor: pointer;
   font-family: Poppins;
   margin-top: 20px;
+  transition: 0.1s ease-in-out;
 }
 .inputs-links:hover {
-  background-color: rgba(54, 79, 58, 0.4823529412);
+  background-color: rgba(116, 116, 116, 0.3647058824);
+  box-shadow: 15px 10px 12px rgba(204, 201, 201, 0.336);
+  transform: scale(1.1);
 }
 
 #cnpjInput {
@@ -173,7 +182,8 @@ body {
   width: 80%;
   height: 50%;
   border-radius: 25px;
-  background: radial-gradient(circle, rgb(11, 115, 91) 0%, rgb(0, 0, 0) 95%);
+  background: rgb(79, 79, 83);
+  background: radial-gradient(circle, rgb(79, 79, 83) 49%, rgb(0, 0, 0) 100%);
   position: relative;
   display: flex;
   justify-content: center;
@@ -211,22 +221,23 @@ body {
   opacity: 1;
 }
 
-button {
+#vejaMais {
   position: absolute;
   bottom: 15px;
   right: 0%;
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #0f243b;
+  background-color: rgba(126, 124, 124, 0.5058823529);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
-
-button:hover {
-  background-color: #b8ac0e;
+#vejaMais:hover {
+  background-color: rgba(116, 116, 116, 0.3647058824);
+  box-shadow: 15px 10px 12px rgba(204, 201, 201, 0.336);
+  transform: scale(1.1);
 }
 
 .arrow {
@@ -262,6 +273,58 @@ button:hover {
 
 .arrow i {
   font-size: 30px;
+}
+
+.janela-modal-qrcode {
+  position: fixed;
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  background-color: #d67e0a;
+  z-index: 999;
+  border-radius: 25px;
+  display: none;
+}
+.janela-modal-qrcode .container-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.janela-modal-qrcode .container-modal img {
+  margin-top: 10%;
+  width: 60%;
+}
+.janela-modal-qrcode .container-modal .copiar-qrcode {
+  text-align: center;
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-color: rgba(34, 29, 29, 0.6392156863);
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
+  color: #fff;
+  width: 50%;
+  font-size: clamp(1.1rem, 1.8vw, 1.2rem);
+  cursor: pointer;
+  font-family: Poppins;
+  margin-top: 20px;
+}
+.janela-modal-qrcode .container-modal .copiar-qrcode:hover {
+  background-color: rgba(54, 79, 58, 0.4823529412);
+}
+.janela-modal-qrcode .container-modal #x-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

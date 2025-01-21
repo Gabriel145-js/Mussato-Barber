@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
 
-   
+
     <title>Document</title>
 </head>
 
@@ -15,6 +15,14 @@
 
         <div class="botoes-acima">
             <input id="qrcode" type="button" value="QrCode">
+            <div class="janela-modal-qrcode" >
+                <div class="container-modal">
+                    <button id="x-btn"><i class="fa-solid fa-x  fa-2x "></i></button>
+                    <img src="assents/Imgs/qrcode-pixMBS.png"  alt=""><br>
+                    <button class="copiar-qrcode">Copiar codigo qrcode</button>
+                  
+                </div>
+            </div>
             <input id="compartilhar" type="button" value="Compartilhar" onclick="compartilhar()">
         </div>
 
@@ -39,15 +47,13 @@
                     <div class="foto" style="background-image: url('assents/Imgs/cbl.jpg');"></div>
                     <div class="foto" style="background-image: url('assents/Imgs/cbl2.jpg');"></div>
                     <div class="foto" style="background-image: url('assents/Imgs/Design\ sem\ nome\ \(3\).png');"></div>
-                   
-                   
+
                 </div>
-                
-    
+
             </div>
             <button class="arrow" id="proximo"> <i class="fa-solid fa-arrow-right"></i></button>
             <button class="arrow" id="antes"> <i class="fa-solid fa-arrow-left"></i></button>
-            
+
             <button id="vejaMais">Pagar Agora</button>
         </section>
     </main>
@@ -57,6 +63,8 @@
 <script src="scripts/script.js"></script>
 <script src="scripts/abrirapp.js"></script>
 <script src="scripts/carrosel.js"></script>
-
+<script src="scripts/gerarQr.js"></script>
+<script src="https://kit.fontawesome.com/0c81659ef6.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
 </html>

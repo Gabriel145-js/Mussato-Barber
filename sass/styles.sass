@@ -6,9 +6,8 @@ html
     height: auto
 
 body
-    background: rgb(33, 33, 33)
-    background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(5, 45, 41, 1) 100%)
-
+    background: rgb(79,79,83)
+    background: radial-gradient(circle, rgba(79,79,83,1) 7%, rgba(0,0,0,1) 100%)
     height: auto
     display: flex
     justify-content: center
@@ -21,8 +20,8 @@ body
     width: 50%
     height: auto
     min-height: 90%
-    background: rgb(11, 115, 91)
-    background: radial-gradient(circle, rgba(11, 115, 91, 1) 0%, rgba(0, 0, 0, 1) 95%)
+    background: rgb(79,79,83)
+    background: radial-gradient(circle, rgba(79,79,83,1) 7%, rgba(0,0,0,1) 75%)    
     border-radius: 20px
     margin-top: 40px
     margin-bottom: 40px
@@ -45,7 +44,7 @@ body
     margin-right: 10%
     border: 3px solid transparent
     border-radius: 8px
-    background-color: #221d1da3
+    background-color: $backgroudbutton
     box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445)
     color: #fff
     width: 20%
@@ -53,26 +52,28 @@ body
     font-size: $size
     cursor: pointer
     font-family: $poppins
+    transition: $transitionbutton
 
     &:hover
-        background-color: #364f3a7b
+        @include hover-buttons
 
 #qrcode
     text-align: center
     position: relative
     border: 3px solid transparent
     border-radius: 8px
-    background-color: #221d1da3
-    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445)
+    background-color: $backgroudbutton
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.445)
     color: #fff
     width: 20%
     font-size: $size
     cursor: pointer
     font-family: $poppins
     margin-left: 10%
+    transition: $transitionbutton
 
     &:hover
-        background-color: #364f3a7b
+        @include hover-buttons
 
 #img
     display: flex
@@ -99,17 +100,21 @@ body
     position: relative
     border: 3px solid transparent
     border-radius: 8px
-    background-color: #221d1da3
-    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445)
-    color: #fff
+    background-color: $backgroudbutton
+    box-shadow: 15px 10px 12px rgba(0, 0, 0, 0.445)
+    color: #ffffff
     width: 100%
     font-size: $size
     cursor: pointer
     font-family: $poppins
     margin-top: 20px
+    transition: $transitionbutton
 
     &:hover
-        background-color: #364f3a7b
+        @include hover-buttons
+        
+        
+       
 
 #cnpjInput
     position: absolute //somente para ter certeza que não ira aparecer o conteudo sensivel.
@@ -165,8 +170,8 @@ body
     width: 80%
     height: 50%
     border-radius: 25px
-    background: radial-gradient(circle, rgba(11, 115, 91, 1) 0%, rgba(0, 0, 0, 1) 95%)
-  
+    background: rgb(79,79,83)
+    background: radial-gradient(circle, rgba(79,79,83,1) 49%, rgba(0,0,0,1) 100%)
     position: relative
     display: flex
     justify-content: center
@@ -201,21 +206,22 @@ body
 .foto.visible
     opacity: 1
 
-button
+#vejaMais
     position: absolute
     bottom: 15px
     right: 0%
     transform: translateX(-50%)
     padding: 10px 20px
-    background-color: #0f243b
+    background-color: $backgroudbutton
     color: white
     border: none
     border-radius: 5px
     cursor: pointer
     font-size: 16px
 
-button:hover
-    background-color: #b8ac0e
+    &:hover
+      @include hover-buttons
+        
 
 
 
@@ -255,3 +261,59 @@ button:hover
     font-size: 30px/* Define o tamanho do ícone */
 
 
+
+
+
+.janela-modal-qrcode 
+    position: fixed
+    width: 45%
+    top:50% 
+    left: 50%
+    transform: (translate(-50%,  -50%))
+    height: 90%
+    background-color: #d67e0a     
+    z-index: 999
+    border-radius: 25px
+    display: none
+
+
+    .container-modal
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        & img
+            margin-top: 10%
+            width: 60%
+   
+        .copiar-qrcode
+            text-align: center
+            position: relative
+            border: 3px solid transparent
+            border-radius: 8px
+            background-color: #221d1da3
+            box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445)
+            color: #fff
+            width: 50%
+            font-size: $size
+            cursor: pointer
+            font-family: $poppins
+            margin-top: 20px
+
+            &:hover
+                background-color: #364f3a7b
+        
+        #x-btn
+            position: absolute
+            top: 10px 
+            right: 10px 
+            width: 30px
+            height: 30px
+            background: none
+            border: none
+            cursor: pointer
+            color: #fff 
+        
+            

@@ -11,18 +11,18 @@ async function copiar() {
     }
 }
 
-//Função responsavel pelo compartilhamento.
+//Função responsavel pelo compartilhamento. 
 function compartilhar() {
     if (navigator.share) {
       navigator.share({
         title: document.title,
-        text: 'Confira esse site!',
+        text: 'Confira o novo site da MussattoBarberShop',
         url: window.location.href
       })
       .then(() => console.log('Compartilhado com sucesso!'))
       .catch((error) => console.log('Erro ao compartilhar:', error))
     } else {
-      alert('compartilhamento não suportada neste navegador.')
+      alert('Compartilhamento não suportado')
     }
   }
 
