@@ -117,7 +117,7 @@ body
        
 
 #cnpjInput
-    position: absolute //somente para ter certeza que não ira aparecer o conteudo sensivel.
+    position: absolute 
     top: -99999999
     display: none
 
@@ -206,7 +206,7 @@ body
 .foto.visible
     opacity: 1
 
-#vejaMais
+.pagar-agora
     position: absolute
     bottom: 15px
     right: 0%
@@ -218,9 +218,11 @@ body
     border-radius: 5px
     cursor: pointer
     font-size: 16px
+    transition: $transitionbutton
 
     &:hover
-      @include hover-buttons
+        @include hover-buttons
+        transform: scale(1.1) translateX(-50%)
         
 
 
@@ -271,7 +273,7 @@ body
     left: 50%
     transform: (translate(-50%,  -50%))
     height: 90%
-    background-color: #d67e0a     
+    background-color: #4e4e50f8     
     z-index: 999
     border-radius: 25px
     display: none
@@ -284,26 +286,18 @@ body
         align-items: center
         flex-direction: column
 
-        & img
-            margin-top: 10%
-            width: 60%
-   
-        .copiar-qrcode
-            text-align: center
-            position: relative
-            border: 3px solid transparent
-            border-radius: 8px
-            background-color: #221d1da3
-            box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445)
+        & h2 
             color: #fff
-            width: 50%
-            font-size: $size
-            cursor: pointer
-            font-family: $poppins
-            margin-top: 20px
+            font-family: $poppins   
+            text-align: center
 
-            &:hover
-                background-color: #364f3a7b
+
+            & img
+                margin-top: 5%
+                width: 60%
+   
+        .btn-width
+            width: 50%
         
         #x-btn
             position: absolute
@@ -316,4 +310,7 @@ body
             cursor: pointer
             color: #fff 
         
-            
+#codigo-qr
+    position: absolute
+    z-index: -99999
+    display: none

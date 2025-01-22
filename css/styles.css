@@ -221,7 +221,7 @@ body {
   opacity: 1;
 }
 
-#vejaMais {
+.pagar-agora {
   position: absolute;
   bottom: 15px;
   right: 0%;
@@ -233,11 +233,13 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  transition: 0.1s ease-in-out;
 }
-#vejaMais:hover {
+.pagar-agora:hover {
   background-color: rgba(116, 116, 116, 0.3647058824);
   box-shadow: 15px 10px 12px rgba(204, 201, 201, 0.336);
   transform: scale(1.1);
+  transform: scale(1.1) translateX(-50%);
 }
 
 .arrow {
@@ -282,7 +284,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 90%;
-  background-color: #d67e0a;
+  background-color: rgba(78, 78, 80, 0.9725490196);
   z-index: 999;
   border-radius: 25px;
   display: none;
@@ -294,26 +296,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.janela-modal-qrcode .container-modal img {
-  margin-top: 10%;
+.janela-modal-qrcode .container-modal h2 {
+  color: #fff;
+  font-family: Poppins;
+  text-align: center;
+}
+.janela-modal-qrcode .container-modal h2 img {
+  margin-top: 5%;
   width: 60%;
 }
-.janela-modal-qrcode .container-modal .copiar-qrcode {
-  text-align: center;
-  position: relative;
-  border: 3px solid transparent;
-  border-radius: 8px;
-  background-color: rgba(34, 29, 29, 0.6392156863);
-  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.445);
-  color: #fff;
+.janela-modal-qrcode .container-modal .btn-width {
   width: 50%;
-  font-size: clamp(1.1rem, 1.8vw, 1.2rem);
-  cursor: pointer;
-  font-family: Poppins;
-  margin-top: 20px;
-}
-.janela-modal-qrcode .container-modal .copiar-qrcode:hover {
-  background-color: rgba(54, 79, 58, 0.4823529412);
 }
 .janela-modal-qrcode .container-modal #x-btn {
   position: absolute;
@@ -325,6 +318,12 @@ body {
   border: none;
   cursor: pointer;
   color: #fff;
+}
+
+#codigo-qr {
+  position: absolute;
+  z-index: -99999;
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

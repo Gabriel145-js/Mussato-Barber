@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-
-
-    <title>Document</title>
+    <title>Mussattobarbershop</title>
 </head>
 
 <body>
@@ -15,11 +13,21 @@
 
         <div class="botoes-acima">
             <input id="qrcode" type="button" value="QrCode">
-            <div class="janela-modal-qrcode" >
+            
+            <div class="janela-modal-qrcode" id="modal" >
                 <div class="container-modal">
-                    <button id="x-btn"><i class="fa-solid fa-x  fa-2x "></i></button>
+                    <h2 >Leia o QrCode ou copie!</h2>
+                    <button id="x-btn"><i class="fa-solid fa-xmark fa-2x"></i></button>
                     <img src="assents/Imgs/qrcode-pixMBS.png"  alt=""><br>
-                    <button class="copiar-qrcode">Copiar codigo qrcode</button>
+                    
+                    <input class="inputs-links btn-width" type="button" id="copiar-qr" value="Copiar QrCode" onclick="copiarQrCode()">
+                    <input type="text" id="codigo-qr" value="00020126360014BR.GOV.BCB.PIX0114533733930001455204000053039865802BR5919Joao Vitor Mussatto6013Caxias do Sul62220518MussattoBarberShop630437BC" readonly>
+                    
+                    <button class="inputs-links btn-width"  type="button"  onclick="compartilharQrCode()">Compartilhar QrCode</button>
+                    
+                    <input class="inputs-links btn-width" type="button" id="copyButton" value="Copiar chave PIX/CNPJ"
+                    onclick="copiar()">
+                    <input type="text" id="cnpjInput" value="53.373.393/0001-45" readonly>
                   
                 </div>
             </div>
@@ -30,13 +38,13 @@
 
         <section>
             <div class="botoes-interativos">
-                <input class="inputs-links" type="button" value="Agende seu Horário" onclick="abrirApp();">
+                <input class="inputs-links" type="button" value="Agende seu Horário" onclick="abrirApp();" target="_blank">
                 <input class="inputs-links" type="button" value="Avaliar no Google">
-                <input class="inputs-links" type="button" value="Instagram"
+                <input class="inputs-links" type="button" value="Instagram" 
                     onclick="window.open('https://www.instagram.com/_mussattobarbershop/', '_blank');">
                 <input class="inputs-links" type="button" id="copyButton" value="Copiar chave PIX/CNPJ"
                     onclick="copiar()">
-                <input type="text" id="cnpjInput" value="12.345.678/0001-90" readonly>
+                <input type="text" id="cnpjInput" value="53.373.393/0001-45" readonly>
 
             </div>
         </section>
@@ -54,7 +62,7 @@
             <button class="arrow" id="proximo"> <i class="fa-solid fa-arrow-right"></i></button>
             <button class="arrow" id="antes"> <i class="fa-solid fa-arrow-left"></i></button>
 
-            <button id="vejaMais">Pagar Agora</button>
+            <button class="pagar-agora " >Pagar Agora</button>
         </section>
     </main>
 
@@ -63,7 +71,7 @@
 <script src="scripts/script.js"></script>
 <script src="scripts/abrirapp.js"></script>
 <script src="scripts/carrosel.js"></script>
-<script src="scripts/gerarQr.js"></script>
+<script src="scripts/qrCode.js"></script>
 <script src="https://kit.fontawesome.com/0c81659ef6.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 

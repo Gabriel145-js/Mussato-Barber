@@ -26,3 +26,25 @@ function compartilhar() {
     }
   }
 
+//Responsavel por abrir e fechar a janela Modal do button QrCode e do Pagar Agora.
+function abrirModal(){
+  const btnQr = document.getElementById('qrcode')
+  const janelaModal = document.querySelector('.janela-modal-qrcode')
+  const fecharBtn = document.getElementById('x-btn')
+  const btnPagar = document.querySelector('.pagar-agora')
+
+btnQr.addEventListener('click', () => {
+    janelaModal.style.display = 'block'
+
+})
+
+fecharBtn.addEventListener('click', () => {
+    janelaModal.style.display = 'none'
+    
+})
+
+btnPagar.addEventListener('click', () => {
+    janelaModal.style.display = 'block'
+})
+}
+abrirModal()
