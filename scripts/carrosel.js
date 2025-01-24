@@ -1,57 +1,43 @@
-
-let index = 0;
 const fotos = document.querySelectorAll('.foto')
 const carrossel = document.querySelector('.carrossel')
 const proximo = document.getElementById('proximo')
 const antes = document.getElementById('antes')
 
-function abrilModal () {
+let contador = 0
+
+// Inicializa a primeira foto como visível
+fotos[0].classList.add('visible')
+
+function aparecerFoto() {
+  // Remove a classe 'visible' de todas as fotos
+  fotos.forEach(foto => {
+    foto.classList.remove('visible')
+  })
+
+  // Adiciona a classe 'visible' à foto atual
+  fotos[contador].classList.add('visible')
+
+  // Move o carrossel para a esquerda
+  carrossel.style.transform = `translateX(-${contador * 100}%)`
+
+  // Incrementa o contador e ajusta para loop contínuo
+  contador = (contador + 1) % fotos.length
+}
+
+// Chama a função aparecerFoto a cada 3 segundos
+setInterval(aparecerFoto, 3000)
+
+// Responsável por abrir a janela modal do botão "Pagar agora"
+function abrilModal() {
   const btnQr = document.getElementById('qrcode')
   const janelaModal = document.querySelector('.janela-modal-qrcode')
   const fecharBtn = document.getElementById('x-btn')
-  
+
   btnQr.addEventListener('click', () => {
-      janelaModal.style.display = 'block'
-  
+    janelaModal.style.display = 'block'
   })
-  
+
   fecharBtn.addEventListener('click', () => {
-      janelaModal.style.display = 'none'
+    janelaModal.style.display = 'none'
   })
-  }
-  
-
-function mudarFoto() {
-    
-    fotos.forEach(foto => {
-        foto.classList.remove('visible')
-    });
-    
-    fotos[index].classList.add('visible')
-
-    carrossel.style.transform = `translateX(-${index * 100}%)`
-
-    index = (index + 1) % fotos.length
-  
 }
-
-proximo.onclick = function() {
-  index = (index + 1) % fotos.length; 
-  mudarFoto();  
-};
-
-antes.onclick = function() {
-  index = (index - 1 + fotos.length) % fotos.length 
-};
-
-fotos.forEach((foto, i) => {
-    if (i === 0) {
-        foto.classList.add('visible');
-    }
-});
-
-setInterval(mudarFoto, 3000);
-
-
-
-

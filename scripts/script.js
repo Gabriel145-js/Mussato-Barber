@@ -1,7 +1,7 @@
 //responsavel por copiar o valor oculto no button.
 
 async function copiar() {
-    var cnpj = document.getElementById("cnpjInput").value
+    var cnpj = document.querySelector(".cnpjInput").value
     try { 
         await navigator.clipboard.writeText(cnpj)
         alert("CNPJ copiado ")
@@ -48,3 +48,4 @@ btnPagar.addEventListener('click', () => {
 })
 }
 abrirModal()
+

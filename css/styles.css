@@ -92,11 +92,55 @@ body {
   margin-top: 4rem;
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   transition: transform 0.3s ease;
 }
 #img img:hover {
   transform: scale(1.1);
+}
+
+.infos {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Poppins;
+  color: #ffffff;
+}
+
+.infos h4 {
+  margin-top: -2px;
+  font-size: 1.5em;
+  text-shadow: 10px 12px 4px rgba(0, 0, 0, 0.678);
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto;
+  animation: typing 4s steps(40, end), pulsar 1.5s infinite;
+  animation-delay: 0s, 3.5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.infos > p {
+  margin-top: -15px;
+  font-size: clamp(1.1rem, 1.8vw, 1.2rem);
 }
 
 .botoes-interativos {
@@ -126,9 +170,8 @@ body {
   transform: scale(1.1);
 }
 
-#cnpjInput {
+.cnpjInput {
   position: absolute;
-  top: -99999999;
   display: none;
 }
 
