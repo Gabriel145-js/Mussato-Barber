@@ -32,6 +32,7 @@ body {
 }
 
 .botoes-acima {
+  position: relative;
   display: inline-block;
   flex-wrap: nowrap;
   background: none;
@@ -175,34 +176,14 @@ body {
   display: none;
 }
 
-@media (min-width: 300px) and (max-width: 600px) {
-  .card {
-    width: 100%;
-    height: 100%;
-  }
-  .inputs-links {
-    width: 100%;
-  }
-  #compartilhar {
-    margin-top: 20%;
-    width: 35%;
-  }
-  #qrcode {
-    margin-top: 20%;
-  }
+.wpp-btn {
+  font-size: clamp(1.1rem, 1.8vw, 1.2rem);
+  font-family: Poppins;
+  color: #ffffff;
+  background: none;
+  border: none;
 }
-@media (min-width: 601px) and (max-width: 1024px) {
-  .card {
-    width: 100%;
-    height: 100%;
-  }
-  .inputs-links {
-    width: 100%;
-  }
-  #compartilhar {
-    width: 25%;
-  }
-}
+
 .janelas-pagamentos {
   width: 80%;
   max-width: 800px;
@@ -367,6 +348,42 @@ body {
   position: absolute;
   z-index: -99999;
   display: none;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  body {
+    margin-top: -90px;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+  }
+  .botoes-acima {
+    position: relative;
+    width: 100%;
+  }
+  .inputs-links {
+    width: 100%;
+  }
+  #compartilhar {
+    margin-top: 20%;
+    width: 35%;
+  }
+  #qrcode {
+    margin-top: 20%;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    width: 100%;
+    height: 100%;
+  }
+  .inputs-links {
+    width: 100%;
+  }
+  #compartilhar {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,19 @@
+/* Error: There is no module with the namespace "variables".
+ *   ,
+ * 7 |   @media #{variables.$mobile}
+ *   |            ^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\mixins.sass 7:12         mobil()
+ *   sass\responsividade.sass 6:1  @use
+ *   sass\styles.sass 3:1          root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "variables".\a   \2577 \a 7 \2502    @media #{variables.$mobile}\d\a   \2502             ^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\mixins.sass 7:12         mobil()\a   sass\\responsividade.sass 6:1  @use\a   sass\\styles.sass 3:1          root stylesheet';
+}
