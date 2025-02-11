@@ -1,3 +1,5 @@
+//************Em desenvolvimento*************
+
 const fotos = document.querySelectorAll('.foto')
 const carrossel = document.querySelector('.carrossel')
 const proximo = document.getElementById('proximo')
@@ -20,19 +22,5 @@ function aparecerFoto() {
 }
 
 
-setInterval(aparecerFoto, 4000)
+setInterval(aparecerFoto, 3000)
 
-// Responsável por abrir a janela modal do botão "Pagar agora"
-function abrilModal() {
-  const btnQr = document.getElementById('qrcode')
-  const janelaModal = document.querySelector('.janela-modal-qrcode')
-  const fecharBtn = document.getElementById('x-btn')
-
-  btnQr.addEventListener('click', () => {
-    janelaModal.style.display = 'block'
-  })
-
-  fecharBtn.addEventListener('click', () => {
-    janelaModal.style.display = 'none'
-  })
-}

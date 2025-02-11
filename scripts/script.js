@@ -35,6 +35,7 @@ function abrirModal(){
 
 btnQr.addEventListener('click', () => {
     janelaModal.style.display = 'block'
+    
 
 })
 

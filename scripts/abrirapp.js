@@ -1,3 +1,5 @@
+//************Em desenvolvimento*************
+
 function abrirApp() {
     // Links para abrir o AppBarber diretamente
     var androidLink = 'intent://appbarber-cliente.com/#Intent;package=com.appbarber.cliente;scheme=https;end'
