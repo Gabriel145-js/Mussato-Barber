@@ -27,3 +27,4 @@ function abrirApp() {
 function isIos() {
     return /iphone|ipod|ipad/i.test(navigator.userAgent)
 }
+
